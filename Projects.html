@@ -1,0 +1,108 @@
+<!--      
+
+A custom-built web application designed to connect seamlessly to the company’s server, 
+allowing multiple users to access, generate, and share reports in a transparent and collaborative environment. 
+This system ensures secure, real-time data synchronization, enabling employees to stay informed and work efficiently.
+
+Multi-User Access: Supports multiple employees with role-based permissions. 
+Real-Time Reporting: Users can generate, view, and share reports instantly.
+Centralized Server Connection: Ensures secure and consistent data access. 
+Collaboration & Transparency: Fcilitates open communication and document sharing.
+Security & Compliance: Implements encryption and access control for data protection.
+
+This solution enhances workflow efficiency by providing a structured platform for seamless document management and team collaboration.
+
+By Joseph Resendes
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Joseph Resendes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="certs-skills.html">Certs/Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-alt">
+      <div class="container section-content">
+        <h1 class="section-title">Projects</h1>
+        <p>Here are a few of the projects I’m most proud of.</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>AITHREATDETECT – Edge AI Threat Detection</h3>
+            <p class="project-tagline">
+              Onboard threat detection for spacecraft-style bus traffic on Snapdragon RB5.
+            </p>
+            <p>
+              Built a prototype architecture to ingest telemetry/command traffic, analyze it
+              with an AI model running on the RB5, and output JSON-based threat reports. Focused
+              on constraints like limited compute, near real-time monitoring, and simple CLI workflows.
+            </p>
+            <p class="project-tech">
+              Tools: Python · Qualcomm RB5 · F´ · JSON Schema · Linux
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>Xworm Malware Dynamic Analysis</h3>
+            <p class="project-tagline">
+              Sandboxed execution, IOCs, and MITRE ATT&CK mapping.
+            </p>
+            <p>
+              Used environments like ANY.Run and Cuckoo Sandbox to monitor Xworm’s behavior, including
+              process creation, persistence mechanisms, registry changes, and network C2 traffic.
+              Documented IOCs and mapped them to ATT&CK techniques, then proposed blue-team responses.
+            </p>
+            <p class="project-tech">
+              Tools: ANY.Run · Cuckoo Sandbox · Wireshark · MITRE ATT&CK
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>Python: Rock Paper Scissors</h3>
+            <p class="project-tagline">
+              Building a small Rock Paper Scissors game for users.
+            </p>
+            <p>
+              Built the game loop, handled user input, and implemented conditional 
+              decision-making to determine win/loss outcomes. This project helped me 
+              strengthen my fundamentals in control flow, input validation, and basic 
+              game logic solidifying my foundation before moving into 
+              more complex automation and security-focused scripts.
+            </p>
+            <p class="project-tech">
+              Tools: Python3.11 · Numpy · Random · time
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Joseph Resendes. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

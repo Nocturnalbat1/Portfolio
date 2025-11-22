@@ -1,0 +1,102 @@
+<!--      
+
+A custom-built web application designed to connect seamlessly to the company’s server, 
+allowing multiple users to access, generate, and share reports in a transparent and collaborative environment. 
+This system ensures secure, real-time data synchronization, enabling employees to stay informed and work efficiently.
+
+Multi-User Access: Supports multiple employees with role-based permissions. 
+Real-Time Reporting: Users can generate, view, and share reports instantly.
+Centralized Server Connection: Ensures secure and consistent data access. 
+Collaboration & Transparency: Fcilitates open communication and document sharing.
+Security & Compliance: Implements encryption and access control for data protection.
+
+This solution enhances workflow efficiency by providing a structured platform for seamless document management and team collaboration.
+
+By Joseph Resendes
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Joseph Resendes</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="certs-skills.html">Certs/Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <header class="hero-banner">
+  <div class="hero-overlay">
+    <div class="container hero-content">
+
+      <!-- LEFT SIDE: icon + text -->
+      <div class="hero-left">
+        <!-- text block -->
+        <div class="hero-text">
+          <h1>Hi, I'm <span class="accent">Joseph Resendes</span></h1>
+          <p class="hero-subtitle">
+            I am currently studying Cyber Security & Intelligence at Embry-Riddle Aeronautical University. 
+            Cyber has always been that one area where the more I learn the more I discover. Right now I'm branching 
+            out into software and hardware security to understand systems from every angle. As of now, I’m looking 
+            for a full-time role with strong growth opportunities. If you think I’d be a good fit for your team, 
+            feel free to reach out.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: photo -->
+      <div class="hero-right">
+        <img src="img/Picture1.png" alt="Joseph at Hoover Dam" class="hero-photo" />
+      </div>
+
+    </div>
+  </div>
+</header>
+
+        <div class="hero-card">
+          <h2>Currently Working On</h2>
+          <ul>
+            <li>Edge AI threat detection on Snapdragon RB5</li>
+            <li>Cryptography Enigma Machine</li>
+            <li>Security+ Certification</li>
+            <li>Hacking the Mind: How Cyber Attackers Exploit Psychology Presentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="hero-card">
+          <h2>Future events</h2>
+          <ul>
+            <li>Maritime Cybersecurity Hackathon 12/15/2025</li>
+            <li>RSAC Scholar 02/12/2026 </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Joseph Resendes. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
