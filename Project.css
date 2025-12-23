@@ -1,0 +1,436 @@
+/* =========================================================
+   Global Styles
+   ========================================================= */
+:root {
+  --bg: #050814;
+  --bg-alt: #0c1021;
+  --fg: #f5f7ff;
+  --muted: #a0a4c0;
+  --accent: #4f8cff;
+  --accent-soft: rgba(79, 140, 255, 0.15);
+  --card-bg: #11162b;
+  --border: #20263d;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --shadow-soft: 0 18px 35px rgba(0, 0, 0, 0.45);
+  --max-width: 1100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: radial-gradient(circle at top, #151a33 0, #050814 50%);
+  color: var(--fg);
+}
+
+/* basic text defaults so subpages don’t look naked if unstyled */
+h1 {
+  font-size: clamp(2.4rem, 4vw, 3.1rem);
+  margin: 1.5rem 0 1rem;
+}
+h2 {
+  font-size: 2rem;
+  margin: 1.5rem 0 1rem;
+}
+p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0.4rem 0;
+}
+ul {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =========================================================
+   Layout Helpers
+   ========================================================= */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-alt {
+  background: radial-gradient(circle at top left, #141a35 0, #050814 60%);
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* =========================================================
+   Header / Navigation
+   ========================================================= */
+
+.hero-banner {
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at top, rgba(79, 140, 255, 0.2), transparent 60%),
+    linear-gradient(135deg, #050814 0%, #0b1430 45%, #050814 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(5, 8, 20, 0.95),
+    rgba(5, 8, 20, 0.75),
+    rgba(5, 8, 20, 0.2)
+  );
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+/* ---------- Header / Navigation ---------- */
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ⬅️ everything moves to the left */
+  gap: 2rem;                   /* spacing between logo/links */
+  height: 64px;
+  padding: 0 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-left: 0;              /* no “push to the right” */
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--fg);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.logo-mark {
+  color: var(--accent);
+  margin-right: 0.35rem;
+}
+
+.logo-text {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--fg);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   Hero (Home + Subpages)
+   ========================================================= */
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding: 3.5rem 1.25rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.4rem, 4vw, 3.1rem);
+  margin: 0 0 0.6rem;
+}
+
+.hero-text .accent {
+  color: var(--accent);
+}
+
+.hero-subtitle {
+  margin-top: 0.75rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  max-width: 32rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.6rem;
+}
+
+/* hero icon/card on home page */
+.hero-card {
+  background: radial-gradient(circle at top, #1b2340 0, var(--card-bg) 60%);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.4rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo {
+  max-width: 100%;
+  max-height: 380px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(79, 140, 255, 0.75);
+}
+
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease,
+    transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 14px 25px rgba(79, 140, 255, 0.35);
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 35px rgba(79, 140, 255, 0.45);
+}
+
+.ghost-btn {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--border);
+}
+
+.ghost-btn:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+
+
+.project-page {
+    max-width: 1100px;
+    margin: 40px auto 60px;
+    padding: 28px 32px 40px;
+    background: rgba(7, 12, 32, 0.96);
+    border-radius: 18px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #e5e9ff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.project-page h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.project-subtitle {
+    color: #9ca9d9;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.project-page h2 {
+    font-size: 1.25rem;
+    margin-top: 26px;
+    margin-bottom: 8px;
+}
+
+.project-page p,
+.project-page li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.project-page ul {
+    margin-left: 22px;
+    margin-top: 6px;
+}
+
+/* Tools line */
+.tools-line {
+    margin-top: 6px;
+    color: #c2c9f5;
+}
+.tools-line span {
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-size: 0.78rem;
+    color: #7fb3ff;
+    font-weight: 600;
+    margin-right: 6px;
+}
+/* Centered, framed hardware gallery */
+.hardware-frame {
+    width: fit-content;             /* frame fits the image */
+    margin: 20px auto 30px auto;    /* centers the whole block */
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(120, 160, 255, 0.35); /* blue NASA-style frame */
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
+    text-align: center;
+}
+
+.hardware-img {
+    display: block;
+    width: 350px;                    /* 👈 controls size */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.hardware-img:hover {
+    transform: scale(1.03);
+    transition: transform 0.25s ease;
+}
+
+.img-caption {
+    color: #9ca9d9;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+
+/* Back link */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 24px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #9ca9d9;
+}
+.back-link::before {
+    content: "←";
+}
+.back-link:hover {
+    color: #ffffff;
+}
+
+/* Safety: all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto 40px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #9bbcff;
+  border: 1px solid rgba(120,180,255,0.35);
+  background: rgba(120,180,255,0.08);
+  transition: 
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.download-btn:hover {
+  background: rgba(120,180,255,0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(120,180,255,0.35);
+}
+
+
