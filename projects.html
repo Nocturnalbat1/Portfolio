@@ -22,16 +22,17 @@ By Joseph Resendes
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Joseph Resendes</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-container">
       <nav class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="Index.html">Home</a>
         <a href="experience.html">Experience</a>
-        <a href="projects.html" class="active">Projects</a>
+        <a href="Projects.html" class="active">Projects</a>
         <a href="certs-skills.html">Certs/Skills</a>
+        <a href="courses.html">Courses</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -41,160 +42,91 @@ By Joseph Resendes
   <section class="section">
     <div class="container">
 
-      <!-- Page header -->
-      <header class="page-header">
-        <h1 class="page-title">Projects</h1>
-        <p class="page-subtitle">
-          Here are a few projects I completed.
-        </p>
-      </header>
+      <!-- FEATURED PROJECT -->
+<section class="featured-project">
+  <h2 class="section-label">Top Project</h2>
 
-      <!-- Projects list -->
-      <div class="projects-list">
+  <div class="featured-card">
+    <img src="img/NASA.jpg" alt="NASA Logo" class="featured-logo">
 
-        <!-- AITHREATDETECT -->
-        <article class="project-card">
-          <h2 class="project-title"> AITHREATDETECT – Edge AI Threat Detection </h2>
-          <p class="project-summary">
-            Onboard threat detection for spacecraft-style bus traffic running on a Snapdragon RB5.
-            Built a prototype architecture to ingest telemetry/command traffic, analyze it with an
-            AI model, and output JSON-based threat reports under tight resource constraints.
-          </p>
-          <p class="project-tools">
-            <span class="label">Tools:</span> Python · Qualcomm RB5 · F´ Framework
-          </p>
-        </article>
+    <div class="featured-content">
+      <h3>AIThreatDetect – Edge AI Threat Detection</h3>
+      <span class="featured-tag">NASA JPL Research Project</span>
 
-        <!-- Xworm Malware Dynamic Analysis -->
-        <article class="project-card">
-          <h2 class="project-title">Xworm Malware Dynamic Analysis</h2>
-          <p class="project-summary">
-            Sandboxed execution and behavior analysis of Xworm with ANY.Run and Cuckoo Sandbox.
-            Documented persistence mechanisms, network C2 traffic, and mapped IOCs to
-            MITRE ATT&CK, then proposed blue-team detections.
-          </p>
-          <p class="project-tools">
-            <span class="label">Tools:</span> ANY.Run · Cuckoo Sandbox · Wireshark ·
-            MITRE ATT&CK
-          </p>
-        </article>
+      <p>
+        Onboard threat detection for spacecraft-style telemetry traffic running
+        on a Qualcomm Snapdragon RB5. Designed and deployed a lightweight AI
+        model to analyze command and bus communications under extreme resource
+        constraints.
+      </p>
+      <a href="Projects/NASA.html" class="featured-link">
+        View Project →
+      </a>
+    </div>
+  </div>
+</section>
 
-        <!-- Python RPS -->
-        <article class="project-card">
-          <h2 class="project-title">Python: Rock Paper Scissors</h2>
-          <p class="project-summary">
-            Small game focused on input handling, control flow, and conditional logic.
-            Used this project to tighten fundamentals before moving into more complex
-            automation and security-focused scripting.
-          </p>
-          <p class="project-tools">
-            <span class="label">Tools:</span> Python 3.11 · Numpy · Random · time
-          </p>
-        </article>
+<!-- NORMAL PROJECTS -->
+<section class="projects-section">
+  <h1>Projects</h1>
+  <p class="subtitle">Completed Projects</p>
 
-        <!-- Risk Management Simulation -->
-        <article class="project-card">
-          <h2 class="project-title">Risk Management Simulation</h2>
-          <p class="project-summary">
-            Turn-based Rock Paper Scissors–style simulation to practice decision-making,
-            probabilities, and risk trade-offs. Emphasizes reading outcomes and adapting
-            strategy in later rounds.
-          </p>
-          <p class="project-tools">
-            <span class="label">Tools:</span> Python 3.11 · Numpy · Random · time
-          </p>
-        </article>
+  <div class="projects-box">
+    <a class="project-link" href="Projects/Xworm-Malware-Dynamic-Analysis.html">Xworm Malware Dynamic Analysis</a>
+    <a class="project-link" href="Projects/War-Card-Game.html">Python: War card game</a>
+    <a class="project-link" href="Projects/Risk-Management-Simulation.html">Risk Management Simulation</a>
+    <a class="project-link" href="Projects/HTB-Meow-CTF.html">HTB “Meow” CTF</a>
+    <a class="project-link" href="Projects/SQL-Database-Project.html">SQL Database Project</a>
+  </div>
+</section>
 
-        <!-- HTB Meow CTF -->
-        <article class="project-card">
-          <h2 class="project-title">HTB “Meow” CTF</h2>
-          <p class="project-summary">
-            Walkthrough of HackTheBox “Meow” machine. Focused on enumeration, basic
-            service abuse, and building repeatable note-taking for future CTF and lab work.
-          </p>
-          <p class="project-tools">
-            <span class="label">Tools:</span> Nmap · Netcat · Linux CLI
-          </p>
-        </article>
-
-               <!-- SQL Database -->
-        <article class="project-card">
-          <h2 class="project-title">SQL Database</h2>
-          <p class="project-summary">
-            Built a small Rock Paper Scissors–style application backed by a SQL
-            database to track players, game history, and win/loss outcomes.
-            Focused on schema design, queries, and clean separation between
-            game logic and data storage.
-          </p>
-          <p class="project-tools">
-            <span class="label">Tools:</span> Python 3.11 · Numpy · Random · time · SQL
-          </p>
-        </article>
-
-        <!-- Software Development -->
-        <article class="project-card">
-          <h2 class="project-title">Software Development</h2>
-          <p class="project-summary">
-            Ongoing collection of small games and utilities used to practice
-            version control, refactoring, and documentation. Emphasis on code
-            readability, reusable functions, and building habits that scale to
-            larger security and automation projects.
-          </p>
-          <p class="project-tools">
-            <span class="label">Tools:</span> Python 3.11 · Numpy · Random · time · Git
-          </p>
-        </article>
 
 
              <!-- Future Projects heading -->
-      <section class="future-section">
-        <h2 class="projects-subheading">Future Projects</h2>
-        <p class="projects-subtext">
-          High-level builds I’m actively designing and gathering hardware for.
-        </p>
+<section class="future-projects">
+  <h2>Future Projects</h2>
+  <p class="subtitle">
+    High-level builds I’m actively designing and gathering hardware for.
+  </p>
 
-        <div class="projects-list future-projects">
+  <div class="future-grid">
 
-          <!-- Blue-Team Training Range in a Box -->
-          <article class="project-card project-card--future">
-            <div class="project-card-top">
-              <h3 class="project-title">Blue-Team Training Range in a Box</h3>
-              <span class="project-badge">Planned</span>
-            </div>
-            <p class="project-summary">
-              Portable home lab with simulated IoT devices (smart bulbs, locks,
-              thermostats) exposing simple APIs or serial/UART traffic. Goal is
-              to practice detection engineering, log collection, and incident
-              response workflows in a controlled environment.
-            </p>
-            <p class="project-tools">
-              <span class="label">Planned tools:</span> Python · Docker ·
-              Elastic Stack / Loki · Arduino / ESP32 · Raspberry Pi
-            </p>
-          </article>
+    <article class="future-card">
+      <h3>Blue-Team Training Range in a Box</h3>
+      <span class="status planned">Planned</span>
 
-          <!-- Smart Traffic Camera -->
-          <article class="project-card project-card--future">
-            <div class="project-card-top">
-              <h3 class="project-title">
-                Smart Traffic Camera with License Plate Redaction
-              </h3>
-              <span class="project-badge">Planned</span>
-            </div>
-            <p class="project-summary">
-              Edge device that captures traffic footage, performs license plate
-              detection, and automatically redacts PII before storing or
-              streaming video. Focused on balancing computer vision, privacy,
-              and resource-constrained processing at the edge.
-            </p>
-            <p class="project-tools">
-              <span class="label">Planned tools:</span> NVIDIA Jetson ·
-              OpenCV · Python · MQTT / REST APIs
-            </p>
-          </article>
+      <p>
+        Portable home lab with simulated IoT devices (smart bulbs, locks, thermostats)
+        exposing simple APIs or serial/UART traffic. Goal is to practice detection
+        engineering, log collection, and incident response workflows in a controlled
+        environment.
+      </p>
 
-        </div>
-      </section>
+      <p class="tools">
+        <strong>Planned tools:</strong>
+        Python · Docker · Elastic Stack / Loki · Arduino / ESP32 · Raspberry Pi
+      </p>
+    </article>
+
+    <article class="future-card">
+      <h3>Smart Traffic Camera with License Plate Redaction</h3>
+      <span class="status planned">Planned</span>
+
+      <p>
+        Edge device that captures traffic footage, performs license plate detection,
+        and automatically redacts PII before storing or streaming video. Focused on
+        balancing computer vision, privacy, and resource-constrained processing at
+        the edge.
+      </p>
+
+      <p class="tools">
+        <strong>Planned tools:</strong>
+        NVIDIA Jetson · OpenCV · Python · MQTT / REST APIs
+      </p>
+    </article>
+
+  </div>
+</section>
 
   </main>
 
