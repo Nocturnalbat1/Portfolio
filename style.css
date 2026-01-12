@@ -113,12 +113,6 @@ ul {
   padding: 0 1.5rem;
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.2rem;
-  margin-left: 0;              /* no “push to the right” */
-}
-
 .nav-links a {
   text-decoration: none;
   font-size: 0.9rem;
@@ -380,6 +374,7 @@ ul {
     box-shadow: 0 0 18px rgba(0, 123, 255, 0.75);
 }
 
+
 /* =========================================================
    Projects Page
    ========================================================= */
@@ -568,6 +563,11 @@ ul {
   margin-bottom: 6px;
 }
 
+.future-card p {
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
 .future-card {
   position: relative;
   padding: 22px;
@@ -595,10 +595,7 @@ ul {
     inset 0 0 0 1px rgba(90,150,255,0.20);
 }
 
-.future-card .tools {
-  font-size: 0.85rem;
-  opacity: 0.75;
-}
+
 
 /* Status badge */
 .status.planned {
@@ -607,6 +604,79 @@ ul {
   font-size: 0.75rem;
   padding: 4px 10px;
   border-radius: 999px;
+}
+
+/* Full-width strip like your bottom section */
+
+.events-slider {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.events-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.events-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.evt-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.35);
+  color: #9bbcff;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.evt-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(120,180,255,0.10);
+  border-color: rgba(120,180,255,0.35);
+}
+
+/* Card sizing */
+.event-card {
+  max-width: 700px;
+  padding: 1.2rem;
+  gap: 1rem;
+  grid-template-columns: 1.3fr 0.7fr;
+}
+
+.event-media {
+  max-width: 280px;
+}
+
+.event-image {
+  width: auto !important;
+  max-width: 260px !important;
+  height: auto !important;
+
+  border-radius: 12px;
+  border: 1px solid rgba(120, 160, 255, 0.35);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .experience-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .event-card {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-page { max-width: 900px; margin: 70px auto; padding: 0 20px; }
@@ -767,6 +837,32 @@ ul {
   .grid-2 { grid-template-columns: 1fr; }
 }
 
+.course {
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.course summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: #dbeafe;
+  font-weight: 500;
+}
+
+.course summary::-webkit-details-marker {
+  display: none;
+}
+
+.course-details {
+  margin-top: 10px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
 .card {
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.04);
@@ -777,19 +873,7 @@ ul {
 .card h2 {
   margin: 0 0 12px;
   font-size: 1.05rem;
-  letter-spacing: 0.2px;
-}
-
-/* 1) Make ALL rows use the same layout box */
-.course-list .course-link {
-  display: grid;
-  grid-template-columns: 90px 1fr; /* adjust if you want */
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.06);
-  background: rgba(0,0,0,0.18);
+  letter-spacing: 0.8px;
 }
 
 /* 2) Keep the code tight */
@@ -812,9 +896,6 @@ ul {
   max-width: 100%;
 }
 
-.course-list .name a:hover {
-  text-decoration: underline;
-}
 
 .course-list li {
   display: grid;
@@ -824,13 +905,6 @@ ul {
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.06);
   background: rgba(0,0,0,0.18);
-}
-
-.course-list li:hover {
-  transform: translateY(-2px);
-  background: rgba(120,180,255,0.08);
-  border-color: rgba(120,180,255,0.35);
-  box-shadow: 0 6px 18px rgba(120,180,255,0.18);
 }
 
 .name {
@@ -848,7 +922,6 @@ ul {
 }
 
 .card.highlight { border-color: rgba(255,255,255,0.18); }
-.nav-links a.active { opacity: 1; text-decoration: underline; }
 
 .grid-2 > .card:last-child {
   grid-column: 1 / -1;
@@ -953,7 +1026,4 @@ ul {
     left: -1.5rem;
   }
 }
-
-
-
 
